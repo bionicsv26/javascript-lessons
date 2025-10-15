@@ -1,17 +1,15 @@
 'use strict'
 
-let title
-let screens
-let screenPrice
-let adaptive
-
-let service1
-let service2
-
-let rollback = 25
-let allServicePrices
-let fullPrice
-let servicePercentPrice
+const title = document.getElementsByTagName('h1')[0]
+const btnStart = document.getElementsByClassName('handler_btn')[0]
+const btnReset = document.getElementsByClassName('handler_btn')[1]
+const btnPlus = document.querySelector('.screen-btn')
+const otherItemPercent = document.querySelectorAll('.other-items.percent')
+const otherItemNumber = document.querySelectorAll('.other-items.number')
+const rollbackInput = document.querySelector('.rollback input[type="range"]')
+const rangeValueSpan = document.querySelector('.rollback span.range-value')
+const totalInput = Array.from(document.getElementsByClassName('total-input'))
+let screens = document.querySelectorAll('.screen')
 
 const appData = {
     title: '',
